@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yash Jhorar — Student. Creator. Builder.</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Personal portfolio of Yash Jhorar — student, creator, and technology enthusiast building intelligent systems, modern web products, and digital initiatives." />
+  <meta name="keywords" content="Yash Jhorar, Portfolio, Student, Creator, Builder, Technology Enthusiast, AI Assistant, Happy, Offcult, Nova" />
+  <meta name="author" content="Yash Jhorar" />
+  <meta name="theme-color" content="#05070e" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Yash Jhorar — Student. Creator. Builder." />
+  <meta property="og:description" content="Personal portfolio of Yash Jhorar — exploring technology, creating autonomous systems, and building digital ventures." />
+  <meta property="og:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630' fill='%2305070e'><rect width='1200' height='630'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%2300f0ff' font-family='sans-serif' font-size='64' font-weight='bold'>Yash Jhorar</text></svg>" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Master Configuration File -->
+  <script src="portfolio.config.js"></script>
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon (Futuristic Monogram SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2305070e'/><text x='50%25' y='58%25' dominant-baseline='middle' text-anchor='middle' fill='%2300f0ff' font-family='sans-serif' font-size='16' font-weight='900'>YJ</text></svg>" />
+</head>
+<body>
+
+  <!-- Skip to Content Link for Accessibility -->
+  <a href="#hero" class="skip-link">Skip to main content</a>
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scroll-progress"></div>
+  </div>
+
+  <!-- Ambient Cinematic Background Canvas & Glow Orbs -->
+  <div class="ambient-bg" aria-hidden="true">
+    <canvas id="ambient-canvas" class="ambient-canvas"></canvas>
+    <div class="ambient-glow glow-cyan"></div>
+    <div class="ambient-glow glow-blue"></div>
+    <div class="ambient-glow glow-violet"></div>
+    <div class="ambient-grid"></div>
+  </div>
+
+  <!-- Interactive Subtle Cursor Glow (Desktop Only) -->
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- =========================================================================
+       STICKY NAVIGATION BAR
+       ========================================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Yash Jhorar Home">
+        <span class="brand-monogram">&lt;YJ /&gt;</span>
+        <span class="brand-name" id="nav-brand-name">Yash Jhorar</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-links" id="nav-links-list">
+          <!-- Dynamically populated or statically matched from config -->
+          <li><a href="#hero" class="nav-link active" data-nav="hero">Home</a></li>
+          <li><a href="#about" class="nav-link" data-nav="about">About</a></li>
+          <li><a href="#skills" class="nav-link" data-nav="skills">Skills</a></li>
+          <li><a href="#projects" class="nav-link" data-nav="projects">Projects</a></li>
+          <li><a href="#education" class="nav-link" data-nav="education">Education</a></li>
+          <li><a href="#journey" class="nav-link" data-nav="journey">Journey</a></li>
+          <li><a href="#contact" class="nav-link" data-nav="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Action Button -->
+      <div class="nav-cta-wrap">
+        <a href="#contact" class="btn btn-sm btn-glow">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      <div class="mobile-drawer-inner">
+        <ul class="mobile-nav-links" id="mobile-nav-links">
+          <li><a href="#hero" class="mobile-nav-link" data-nav="hero"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li><a href="#about" class="mobile-nav-link" data-nav="about"><i class="fa-solid fa-user"></i> About</a></li>
+          <li><a href="#skills" class="mobile-nav-link" data-nav="skills"><i class="fa-solid fa-bolt"></i> Skills</a></li>
+          <li><a href="#projects" class="mobile-nav-link" data-nav="projects"><i class="fa-solid fa-code"></i> Projects</a></li>
+          <li><a href="#education" class="mobile-nav-link" data-nav="education"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+          <li><a href="#journey" class="mobile-nav-link" data-nav="journey"><i class="fa-solid fa-route"></i> Journey</a></li>
+          <li><a href="#current-focus" class="mobile-nav-link" data-nav="currentFocus"><i class="fa-solid fa-crosshairs"></i> Current Focus</a></li>
+          <li><a href="#contact" class="mobile-nav-link" data-nav="contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        </ul>
+        <div class="mobile-drawer-footer">
+          <a href="#contact" class="btn btn-primary btn-block">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- =======================================================================
+         SECTION 1: HERO
+         ======================================================================= -->
+    <section class="section hero-section" id="hero">
+      <div class="container hero-container">
+        
+        <!-- Status Pill -->
+        <div class="hero-status-pill" id="hero-status-pill">
+          <span class="status-pulse-dot" aria-hidden="true"></span>
+          <span class="status-text" id="hero-status-text">Available for Collaborations & Projects</span>
+        </div>
+
+        <!-- Name & Dynamic Roles -->
+        <div class="hero-header-wrap">
+          <p class="hero-greeting">Hi, I'm</p>
+          <h1 class="hero-title" id="hero-name">
+            <span class="text-gradient">Yash Jhorar</span>
+          </h1>
+          <div class="hero-tagline-wrap">
+            <p class="hero-tagline" id="hero-tagline">Student. Creator. Builder.</p>
+          </div>
+        </div>
+
+        <!-- Intro Bio Placeholder -->
+        <p class="hero-intro" id="hero-intro">
+          Passionate about building intelligent digital systems, purposeful products, and exploring the frontiers of technology.
+        </p>
+
+        <!-- Hero Call to Action Buttons -->
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary btn-lg" id="hero-cta-primary">
+            <span>Explore My Work</span>
+            <i class="fa-solid fa-arrow-down"></i>
+          </a>
+          <a href="#contact" class="btn btn-outline btn-lg" id="hero-cta-secondary">
+            <span>Get In Touch</span>
+            <i class="fa-regular fa-paper-plane"></i>
+          </a>
+        </div>
+
+        <!-- Quick Stats / Core Pillars -->
+        <div class="hero-pillars">
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fa-solid fa-robot"></i></div>
+            <div class="pillar-info">
+              <span class="pillar-title">Happy</span>
+              <span class="pillar-desc">AI Assistant</span>
+            </div>
+          </div>
+          <div class="pillar-divider"></div>
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fa-solid fa-shirt"></i></div>
+            <div class="pillar-info">
+              <span class="pillar-title">Offcult</span>
+              <span class="pillar-desc">Clothing Store</span>
+            </div>
+          </div>
+          <div class="pillar-divider"></div>
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fa-solid fa-scissors"></i></div>
+            <div class="pillar-info">
+              <span class="pillar-title">Nova</span>
+              <span class="pillar-desc">Salon Initiative</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Subtle Scroll Down Indicator -->
+      <a href="#about" class="scroll-down-indicator" aria-label="Scroll to About section">
+        <span class="mouse-icon">
+          <span class="mouse-wheel"></span>
+        </span>
+      </a>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 2: ABOUT
+         ======================================================================= -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        
+        <div class="section-badge">
+          <i class="fa-solid fa-user-astronaut"></i>
+          <span>Profile Overview</span>
+        </div>
+        <h2 class="section-title" id="about-title">About Me</h2>
+        <p class="section-subtitle" id="about-subtitle">Student, creator, and technology enthusiast building at the intersection of logic and imagination.</p>
+
+        <div class="about-grid">
+          
+          <!-- Bio & Highlights Card -->
+          <div class="about-card glass-panel main-bio-card">
+            <div class="card-inner-glow"></div>
+            <div class="card-header-line">
+              <span class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </span>
+              <span class="terminal-tag">bio.md</span>
+            </div>
+
+            <h3 class="about-bio-heading">Designing the Future, One Idea at a Time</h3>
+            <p class="about-bio-text" id="about-bio-text">
+              I am Yash Jhorar — a student, creator, and builder driven by curiosity for modern technology. I enjoy deconstructing complex problems, developing streamlined digital products, and building tools that make everyday workflows simpler and smarter.
+            </p>
+
+            <div class="about-education-highlight" id="about-education-highlight">
+              <div class="edu-badge-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div class="edu-badge-content">
+                <span class="edu-badge-label">Academic Pathway</span>
+                <p class="edu-badge-text" id="about-edu-text">Pursuing higher education with a focus on computer science, software design, and modern technology paradigms.</p>
+              </div>
+            </div>
+
+            <div class="about-actions">
+              <a href="#projects" class="btn btn-sm btn-outline">
+                <i class="fa-solid fa-code"></i> View Creations
+              </a>
+              <a href="#contact" class="btn btn-sm btn-ghost">
+                <i class="fa-solid fa-comments"></i> Start a Conversation
+              </a>
+            </div>
+          </div>
+
+          <!-- Interests & Goals Side Cards -->
+          <div class="about-side-stack">
+            
+            <!-- Interests Card -->
+            <div class="about-card glass-panel">
+              <div class="side-card-header">
+                <i class="fa-solid fa-compass icon-accent"></i>
+                <h4 class="side-card-title">Interests & Curiosities</h4>
+              </div>
+              <div class="interests-grid" id="about-interests-container">
+                <!-- Injected via script.js from config -->
+              </div>
+            </div>
+
+            <!-- Goals Card -->
+            <div class="about-card glass-panel">
+              <div class="side-card-header">
+                <i class="fa-solid fa-bullseye icon-accent"></i>
+                <h4 class="side-card-title">Current Goals</h4>
+              </div>
+              <ul class="goals-list" id="about-goals-container">
+                <!-- Injected via script.js from config -->
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 3: SKILLS
+         ======================================================================= -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        
+        <div class="section-badge">
+          <i class="fa-solid fa-microchip"></i>
+          <span>Capabilities & Tools</span>
+        </div>
+        <h2 class="section-title" id="skills-title">Skills & Toolkit</h2>
+        <p class="section-subtitle" id="skills-subtitle">Technologies, frameworks, and disciplines I leverage to create.</p>
+
+        <!-- Category Grid (Only skills provided in config) -->
+        <div class="skills-categories-grid" id="skills-grid-container">
+          <!-- Dynamically generated from PORTFOLIO_CONFIG.skills.categories -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 4: PROJECTS (STRONGEST SECTION)
+         ======================================================================= -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        
+        <div class="section-badge badge-glow">
+          <i class="fa-solid fa-cubes"></i>
+          <span>Portfolio Showcase</span>
+        </div>
+        <h2 class="section-title" id="projects-title">Featured Projects</h2>
+        <p class="section-subtitle" id="projects-subtitle">A selected portfolio of autonomous assistants, e-commerce, and business initiatives.</p>
+
+        <!-- Projects Showcase: 3D Tilt Cards with Soft Glow & Hover Reveal -->
+        <div class="projects-display" id="projects-container">
+          <!-- Dynamic Project Cards: Happy, Offcult, Nova -->
+        </div>
+
+        <!-- Section Note / Placeholder Notice -->
+        <div class="projects-footer-note">
+          <i class="fa-regular fa-lightbulb"></i>
+          <span>Project descriptions are customizable placeholders in <code>portfolio.config.js</code>.</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 5: EDUCATION
+         ======================================================================= -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        
+        <div class="section-badge">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span>Academic Foundation</span>
+        </div>
+        <h2 class="section-title" id="education-title">Education</h2>
+        <p class="section-subtitle" id="education-subtitle">Academic journey and foundation in technology and engineering.</p>
+
+        <div class="education-container" id="education-container">
+          <!-- Dynamically populated from PORTFOLIO_CONFIG.education.entries -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 6: JOURNEY (Learn → Explore → Build → Improve)
+         ======================================================================= -->
+    <section class="section journey-section" id="journey">
+      <div class="container">
+        
+        <div class="section-badge">
+          <i class="fa-solid fa-route"></i>
+          <span>Evolution Path</span>
+        </div>
+        <h2 class="section-title" id="journey-title">The Journey</h2>
+        <p class="section-subtitle" id="journey-subtitle">A four-phase progression shaping my philosophy and craftsmanship.</p>
+
+        <div class="journey-track-wrapper">
+          <div class="journey-connecting-line" aria-hidden="true">
+            <div class="journey-line-glow"></div>
+          </div>
+          
+          <div class="journey-stages-grid" id="journey-stages-container">
+            <!-- Learn → Explore → Build → Improve rendered here -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 7: CURRENT FOCUS
+         ======================================================================= -->
+    <section class="section focus-section" id="current-focus">
+      <div class="container">
+        
+        <div class="section-badge badge-cyan">
+          <i class="fa-solid fa-crosshairs"></i>
+          <span>Active Exploration</span>
+        </div>
+        <h2 class="section-title" id="focus-title">Current Focus</h2>
+        <p class="section-subtitle" id="focus-subtitle">Key areas commanding my curiosity, late-night experiments, and deep work.</p>
+
+        <div class="focus-grid" id="focus-grid-container">
+          <!-- Rendered from PORTFOLIO_CONFIG.currentFocus.topics -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 8: ACHIEVEMENTS (Hidden by default; can toggle or placeholder)
+         ======================================================================= -->
+    <section class="section achievements-section hidden" id="achievements">
+      <div class="container">
+        
+        <div class="section-badge">
+          <i class="fa-solid fa-trophy"></i>
+          <span>Milestones</span>
+        </div>
+        <h2 class="section-title" id="achievements-title">Achievements</h2>
+        <p class="section-subtitle" id="achievements-subtitle">Recognitions and accomplishments.</p>
+
+        <div class="achievements-container" id="achievements-container">
+          <!-- Hidden or elegant placeholder rendered here -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 9: CONTACT
+         ======================================================================= -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        
+        <div class="contact-card glass-panel">
+          <div class="contact-glow-orb" aria-hidden="true"></div>
+
+          <div class="section-badge badge-glow">
+            <i class="fa-solid fa-bolt"></i>
+            <span>Get In Touch</span>
+          </div>
+
+          <h2 class="contact-main-heading" id="contact-heading">Let's Build Something.</h2>
+          <p class="contact-subtitle" id="contact-subtitle">
+            Whether you have an idea, a project to collaborate on, or simply want to talk technology — feel free to connect.
+          </p>
+
+          <!-- Direct Email Box with 1-Click Copy -->
+          <div class="email-action-box">
+            <div class="email-display">
+              <i class="fa-regular fa-envelope"></i>
+              <span id="contact-email-val">your-email@example.com</span>
+            </div>
+            <button class="btn btn-sm btn-primary" id="copy-email-btn" title="Copy email address to clipboard">
+              <i class="fa-regular fa-copy"></i>
+              <span class="btn-copy-text">Copy Email</span>
+            </button>
+          </div>
+
+          <!-- Social Links Cards Grid (Placeholders only, never invented URLs) -->
+          <div class="socials-grid" id="contact-socials-container">
+            <!-- Dynamically populated from PORTFOLIO_CONFIG.contact.socials -->
+          </div>
+
+          <!-- Direct Inquiries Notice -->
+          <div class="contact-footnote">
+            <p><i class="fa-solid fa-shield-halved"></i> Social links and email are configurable placeholders in <code>portfolio.config.js</code>.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#hero" class="footer-logo">
+          <span class="brand-monogram">&lt;YJ /&gt;</span>
+          <span class="footer-name">Yash Jhorar</span>
+        </a>
+        <p class="footer-tagline" id="footer-tagline">Student. Creator. Builder.</p>
+      </div>
+
+      <div class="footer-center">
+        <p class="footer-copyright" id="footer-copyright">
+          &copy; <span id="copyright-year">2026</span> Yash Jhorar. All rights reserved.
+        </p>
+        <p class="footer-credit" id="footer-credit">Built with precision & modern web standards.</p>
+      </div>
+
+      <div class="footer-right">
+        <button class="back-to-top-btn" id="back-to-top" aria-label="Back to top of page">
+          <i class="fa-solid fa-arrow-up"></i>
+          <span>Top</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Application Logic -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,40 +1,955 @@
-<!doctype html>
-<html lang="en" class="dark scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Primary SEO Meta Tags -->
-    <title>Yash Jhorar — Web Developer, Design Creator & AI Builder</title>
-    <meta name="title" content="Yash Jhorar — Web Developer, Design Creator & AI Builder" />
-    <meta name="description" content="Personal portfolio of Yash Jhorar, 1st Year BTech CSE student at JECRC University, Jaipur. Creator of Nova, Happy AI assistant, and Offcult." />
-    <meta name="keywords" content="Yash Jhorar, Web Developer, JECRC University, BTech CSE, Offcult, Happy AI, Nova Salon, Portfolio, Jaipur" />
-    <meta name="author" content="Yash Jhorar" />
-    <meta name="theme-color" content="#06080d" />
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yash Jhorar — Web Developer &amp; Design Creator</title>
+  <meta name="description" content="Portfolio of Yash Jhorar, 1st Year BTech CSE student at JECRC University, Jaipur. Builder of Nova, Happy AI assistant, and Offcult.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2306b6d4'/><stop offset='50%25' stop-color='%23a855f7'/><stop offset='100%25' stop-color='%23ec4899'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='%230b0f19'/><path d='M26 24 L50 56 L74 24 H88 L58 65 V82 H42 V65 L12 24 Z' fill='url(%23g)'/></svg>">
+  
+  <!-- Fonts: basis33 + Bitcount Ink + Inter + JetBrains Mono + Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://db.onlinewebfonts.com/c/d08bafd725a4cfc309efb5a88e0b63a5?family=basis33" rel="stylesheet">
+  
+  <!-- Tailwind CDN for Instant Zero-Build Preview -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Bitcount Ink"', '"Space Grotesk"', 'system-ui', 'sans-serif'],
+            bitcount: ['"Bitcount Ink"', 'cursive', 'system-ui', 'sans-serif'],
+            pixel: ['basis33', 'monospace'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            cyber: { 950: '#030508', 900: '#06080d', 850: '#0b0f19', 800: '#111827' },
+            neon: { purple: '#a855f7', cyan: '#06b6d4', pink: '#ec4899', emerald: '#10b981' }
+          }
+        }
+      }
+    }
+  </script>
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://yashjhorar.vercel.app/" />
-    <meta property="og:title" content="Yash Jhorar — Web Developer, Design Creator & AI Builder" />
-    <meta property="og:description" content="I build things people actually use: websites, AI, and ideas. Explore Nova, Happy, and Offcult." />
-    <meta property="og:site_name" content="Yash Jhorar Portfolio" />
+  <style>
+    body { background-color: #06080d; color: #e2e8f0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+    .font-pixel { font-family: 'basis33', monospace; letter-spacing: 0.05em; }
+    .font-bitcount { font-family: 'Bitcount Ink', cursive, sans-serif; letter-spacing: 0.04em; }
+    .glass-card { background: rgba(11, 15, 25, 0.7); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); }
+    .glass-card:hover { border-color: rgba(168, 85, 247, 0.4); box-shadow: 0 10px 30px -10px rgba(168, 85, 247, 0.25); }
+    .text-gradient { background: linear-gradient(135deg, #06b6d4 0%, #a855f7 50%, #ec4899 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    @keyframes marqueeAnim { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
+    .animate-ticker { display: flex; width: max-content; animation: marqueeAnim 25s linear infinite; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #06080d; }
+    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #334155; }
+  </style>
 
-    <!-- Twitter Cards -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Yash Jhorar — Web Developer, Design Creator & AI Builder" />
-    <meta property="twitter:description" content="I build things people actually use: websites, AI, and ideas. Explore Nova, Happy, and Offcult." />
+  <!-- Botpress Webchat — appears on every page, mobile-friendly -->
+  <script src="https://cdn.botpress.cloud/webchat/v5.0/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2026/10/06/06/20261006064930-0L5UJFFW.js" defer></script>
+</head>
+<body class="selection:bg-purple-600/30 selection:text-white">
 
-    <!-- Gradient 'Y' SVG Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='neonY' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2306b6d4'/><stop offset='50%25' stop-color='%23a855f7'/><stop offset='100%25' stop-color='%23ec4899'/></linearGradient></defs><rect width='100' height='100' rx='26' fill='%230b0f19'/><path d='M26 24 L50 56 L74 24 H88 L58 65 V82 H42 V65 L12 24 Z' fill='url(%23neonY)'/></svg>" />
+  <!-- =========================================================================
+       CONFIGURATION SCRIPT (Centralized at the very top of script execution)
+       ========================================================================= -->
+  <script>
+    const SITE = {
+      name: "Yash Jhorar",
+      roles: ["Web Developer", "Design Creator", "AI Builder", "Future Software Engineer"],
+      university: "JECRC University, Jaipur",
+      degree: "BTech Computer Science Engineering (Core), 1st Year",
+      location: "Jaipur, Rajasthan, India",
+      email: "yourname@email.com",            // TODO replace
+      phone: "+91-XXXXXXXXXX",                // TODO replace
+      linkedin: "https://linkedin.com/in/your-handle",   // TODO replace
+      github: "https://github.com/your-username",        // TODO replace
+      instagram: "https://instagram.com/your-handle",    // TODO replace
+      resume: "#",                            // TODO replace
+      projects: [
+        { id: "nova",    name: "Nova",    link: "https://novaglow-salon-marke-o1sh.bolt.host/" },
+        { id: "happy",   name: "Happy",   link: "https://happy.vercel.app" },    // TODO replace
+        { id: "offcult", name: "Offcult", link: "https://lovable.dev/preview/eNqBgHG4nkydWEb8c4C0CNy83d2eLVPU" }
+      ]
+    };
 
-    <!-- Google Fonts & Custom Typography: basis33 + Bitcount Ink + Inter + JetBrains Mono + Space Grotesk -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link href="https://db.onlinewebfonts.com/c/d08bafd725a4cfc309efb5a88e0b63a5?family=basis33" rel="stylesheet" />
-  </head>
-  <body class="bg-[#06080d] text-[#e2e8f0] font-sans antialiased selection:bg-[#a855f7]/30 selection:text-white m-0 p-0 overflow-x-hidden min-h-screen">
-    <div id="root" class="min-h-screen flex flex-col"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    function isPlaceholderLink(val) {
+      if (!val) return true;
+      const trimmed = val.trim();
+      if (trimmed === "#" || trimmed === "" || trimmed === "javascript:void(0)") return true;
+      return /TODO|yourname|your-handle|your-username|XXXXXXXXXX|example\.com/i.test(trimmed);
+    }
+  </script>
+
+  <!-- CloudFront Full-Bleed Looping Background Video -->
+  <video class="fixed inset-0 h-full w-full object-cover lg:scale-[1.2] opacity-75 contrast-125 brightness-90 pointer-events-none z-0" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260725_114042_d2ed2a89-f2fa-449b-9609-da456344257b.mp4" autoplay muted loop playsinline></video>
+  <div class="fixed inset-0 bg-gradient-to-b from-[#06080d]/60 via-transparent to-[#06080d]/80 pointer-events-none z-0"></div>
+
+  <!-- Canvas Particles Background -->
+  <canvas id="particleCanvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+  <div class="fixed -top-40 left-1/4 w-[600px] h-[600px] rounded-full bg-cyan-600/10 blur-[140px] pointer-events-none z-0"></div>
+  <div class="fixed top-1/3 -right-40 w-[600px] h-[600px] rounded-full bg-purple-600/10 blur-[140px] pointer-events-none z-0"></div>
+
+  <!-- Custom Glowing Cursor -->
+  <div id="cursorDot" class="fixed top-0 left-0 w-2.5 h-2.5 bg-cyan-400 rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 shadow-[0_0_12px_#06b6d4] hidden sm:block"></div>
+  <div id="cursorRing" class="fixed top-0 left-0 w-8 h-8 rounded-full border border-cyan-400/50 bg-cyan-500/5 pointer-events-none z-[9998] -translate-x-1/2 -translate-y-1/2 transition-all duration-100 ease-out hidden sm:block"></div>
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="fixed top-0 left-0 right-0 h-[3px] z-[60] bg-slate-900/40">
+    <div id="scrollProgressBar" class="h-full bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 w-0 transition-all duration-75"></div>
+  </div>
+
+  <!-- Sticky Transparent Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50 py-4 bg-[#06080d]/80 backdrop-blur-xl border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500/20 via-purple-600/30 to-pink-500/20 border border-cyan-400/40 flex items-center justify-center shadow-[0_0_15px_rgba(6,182,212,0.3)]">
+          <span class="font-display font-black text-lg text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">YJ</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-white text-base sm:text-lg leading-tight" id="navName">Yash Jhorar</span>
+          <span class="text-[11px] font-mono text-cyan-400 flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            CSE @ JECRC University
+          </span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-1 px-3 py-1.5 rounded-full bg-slate-900/70 border border-white/10 backdrop-blur-md">
+        <a href="#about" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors">About</a>
+        <a href="#education" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors">Education</a>
+        <a href="#skills" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors">Skills</a>
+        <a href="#projects" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors">Projects</a>
+        <a href="#sites" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors">All Sites</a>
+        <a href="#journey" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors">Journey</a>
+        <a href="#contact" class="px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <button id="themeToggleBtn" onclick="toggleTheme()" class="px-3 py-1.5 rounded-xl text-xs font-mono border border-white/10 hover:border-cyan-400 bg-slate-900/70 text-slate-300 hover:text-white transition-all flex items-center gap-1.5 cursor-pointer" title="Toggle Dark/Light Mode">
+          <span id="themeIcon">☀️</span> <span class="hidden sm:inline" id="themeText">Light</span>
+        </button>
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-1.5 rounded-xl text-xs font-mono font-semibold text-white bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 border border-cyan-400/30 shadow-[0_0_15px_rgba(6,182,212,0.35)] transition-all">
+          Let's Connect &rarr;
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Scrolling Container -->
+  <main class="relative z-10 pt-20">
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="min-h-[90vh] flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+        <div class="lg:col-span-7 flex flex-col items-start text-left">
+          <!-- Floating Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-cyan-500/40 backdrop-blur-md mb-6 shadow-[0_0_15px_rgba(6,182,212,0.25)]">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span class="text-xs sm:text-sm font-mono text-cyan-300">BTech CSE @ JECRC University</span>
+          </div>
+
+          <!-- Name -->
+          <h1 class="font-display font-extrabold text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-white leading-[1.05] mb-4">
+            Hi, I'm <span class="text-gradient">Yash Jhorar</span>
+          </h1>
+
+          <!-- Typewriter Subheading -->
+          <div class="h-10 sm:h-12 flex items-center gap-2 mb-6 text-xl sm:text-2xl md:text-3xl font-display font-medium text-slate-300">
+            <span class="text-slate-400">Crafting as</span>
+            <span id="typewriterText" class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-purple-300 to-pink-400">Web Developer</span>
+            <span class="inline-block w-0.5 h-7 bg-cyan-400 animate-pulse"></span>
+          </div>
+
+          <!-- One-Line Tagline -->
+          <p class="text-base sm:text-lg md:text-xl text-slate-300/90 leading-relaxed max-w-2xl mb-8 font-light border-l-2 border-purple-500/50 pl-4 bg-purple-950/10 py-1 rounded-r-lg">
+            &ldquo;I build things people actually use: websites, AI, and ideas.&rdquo;
+          </p>
+
+          <!-- Buttons: View My Work & Contact Me -->
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="#projects" class="px-7 py-3.5 rounded-xl font-display font-semibold text-sm sm:text-base text-white bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 hover:from-cyan-400 hover:to-pink-500 shadow-[0_0_25px_rgba(168,85,247,0.5)] transition-all flex items-center gap-2">
+              <span>View My Work</span>
+              <span>&rarr;</span>
+            </a>
+            <a href="#contact" class="px-7 py-3.5 rounded-xl font-display font-semibold text-sm sm:text-base text-slate-200 bg-slate-900/80 hover:bg-slate-800 border border-white/15 hover:border-cyan-400/50 backdrop-blur-md transition-all">
+              Contact Me
+            </a>
+            <a href="#sites" class="text-xs font-mono text-slate-400 hover:text-cyan-300 transition-colors underline decoration-dotted ml-2">
+              Explore All 4 Sites &darr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero 3D Card / Terminal Mockup -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="w-full max-w-md rounded-2xl bg-gradient-to-b from-slate-900/90 to-[#06080d]/90 border border-purple-500/30 p-6 backdrop-blur-xl shadow-2xl relative">
+            <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
+              <div class="flex items-center gap-2">
+                <div class="w-3 h-3 rounded-full bg-rose-500"></div>
+                <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+                <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+              </div>
+              <span class="font-mono text-xs text-slate-400">yash-workspace.sh</span>
+              <span class="font-mono text-[10px] text-purple-400 bg-purple-950/60 px-2 py-0.5 rounded border border-purple-800/40">1ST YEAR</span>
+            </div>
+            <div class="space-y-3 font-mono text-xs text-slate-300">
+              <div><span class="text-cyan-400">$</span> whoami</div>
+              <div class="pl-4 text-purple-300 bg-purple-950/20 p-2 rounded border border-purple-500/20">
+                "Yash Jhorar" — 1st Year BTech CSE (Core) @ JECRC
+              </div>
+              <div class="pt-1"><span class="text-cyan-400">$</span> cat core_pipeline.c</div>
+              <div class="pl-4 text-slate-300 bg-black/40 p-2.5 rounded border border-white/5 text-[11px] leading-relaxed">
+                <span class="text-purple-400">#include</span> &lt;stdio.h&gt;<br>
+                learn(<span class="text-emerald-300">"C"</span>);<br>
+                master(<span class="text-emerald-300">"C++"</span>);<br>
+                ship(<span class="text-emerald-300">"Nova, Happy, Offcult"</span>);
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT ME SECTION -->
+    <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="mb-12">
+        <span class="font-mono text-xs text-purple-400 uppercase tracking-widest bg-purple-950/40 px-3 py-1 rounded-full border border-purple-500/30">01 // WHO I AM</span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mt-2">
+          About <span class="text-gradient">Me</span>
+        </h2>
+      </div>
+
+      <div class="glass-card rounded-3xl p-6 sm:p-10 mb-12">
+        <p class="text-xl sm:text-2xl font-display font-medium text-white mb-4">
+          I'm <span class="text-cyan-400 font-semibold">Yash Jhorar</span>, a first-year BTech CSE (Core) student at <span class="text-purple-300 font-semibold">JECRC University, Jaipur</span>.
+        </p>
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-light mb-4">
+          I'm a web developer and design creator. I fell in love with coding the moment I started, and my mind just "works" with it. I started as a total beginner, I'm learning C right now, and my goal is to master C++ and then go deep into web development and AI.
+        </p>
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-light">
+          I like turning ideas into real products: websites, brands, and my own AI assistant. Rather than staying trapped in tutorial hell, I ship real working platforms that people can experience.
+        </p>
+      </div>
+
+      <!-- Stats Strip -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-14">
+        <div class="glass-card rounded-2xl p-6 text-center">
+          <div class="font-display font-extrabold text-3xl sm:text-4xl text-gradient mb-1">3+</div>
+          <div class="text-sm font-semibold text-white">Projects Built</div>
+          <div class="text-xs font-mono text-slate-400 mt-0.5">Nova, Happy, Offcult</div>
+        </div>
+        <div class="glass-card rounded-2xl p-6 text-center">
+          <div class="font-display font-extrabold text-3xl sm:text-4xl text-gradient mb-1">1st Year</div>
+          <div class="text-sm font-semibold text-white">CSE Core</div>
+          <div class="text-xs font-mono text-slate-400 mt-0.5">JECRC University</div>
+        </div>
+        <div class="glass-card rounded-2xl p-6 text-center">
+          <div class="font-display font-extrabold text-3xl sm:text-4xl text-gradient mb-1">C &rarr; C++</div>
+          <div class="text-sm font-semibold text-white">Journey</div>
+          <div class="text-xs font-mono text-slate-400 mt-0.5">Foundational mastery</div>
+        </div>
+        <div class="glass-card rounded-2xl p-6 text-center">
+          <div class="font-display font-extrabold text-3xl sm:text-4xl text-gradient mb-1">&infin;</div>
+          <div class="text-sm font-semibold text-white">Curiosity</div>
+          <div class="text-xs font-mono text-slate-400 mt-0.5">Relentless builder drive</div>
+        </div>
+      </div>
+
+      <!-- 4 Quick Fact Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="glass-card rounded-2xl p-6">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold text-lg mb-4">&lt;/&gt;</div>
+          <h4 class="font-display font-bold text-base text-white mb-2">Loves building from scratch</h4>
+          <p class="text-xs sm:text-sm text-slate-300 font-light">Turns blank canvases into responsive platforms and interactive digital experiences.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-6">
+          <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-lg mb-4">&oplus;</div>
+          <h4 class="font-display font-bold text-base text-white mb-2">Beginner who ships real projects</h4>
+          <p class="text-xs sm:text-sm text-slate-300 font-light">Does not stay stuck in tutorials; builds working software that solves actual problems.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-6">
+          <div class="w-10 h-10 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-lg mb-4">&starf;</div>
+          <h4 class="font-display font-bold text-base text-white mb-2">Design + code together</h4>
+          <p class="text-xs sm:text-sm text-slate-300 font-light">Combines glassmorphism, micro-interactions, and neon aesthetics with clean logic.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-6">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg mb-4">&uarr;</div>
+          <h4 class="font-display font-bold text-base text-white mb-2">Always learning &amp; leveling up</h4>
+          <p class="text-xs sm:text-sm text-slate-300 font-light">Mastering C and memory models today, targeting C++, systems, and applied AI tomorrow.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. EDUCATION SECTION -->
+    <section id="education" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="mb-12">
+        <span class="font-mono text-xs text-cyan-400 uppercase tracking-widest bg-cyan-950/40 px-3 py-1 rounded-full border border-cyan-500/30">02 // ACADEMIC FOUNDATIONS</span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mt-2">
+          Education &amp; <span class="text-gradient">Curriculum</span>
+        </h2>
+      </div>
+
+      <div class="glass-card rounded-3xl p-6 sm:p-10">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-white/10">
+          <div>
+            <span class="text-xs font-mono uppercase text-cyan-400 bg-cyan-950/60 px-3 py-1 rounded-lg border border-cyan-500/30">1st Year (Core)</span>
+            <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-white mt-2">BTech Computer Science Engineering (Core)</h3>
+            <p class="text-base sm:text-lg text-purple-300 font-medium mt-1">JECRC University, Jaipur</p>
+          </div>
+          <div class="inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-purple-950/60 border border-purple-500/40 shadow-[0_0_20px_rgba(168,85,247,0.3)]">
+            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span>
+            <div>
+              <span class="text-[10px] uppercase font-mono text-slate-400 block">Active Status</span>
+              <span class="font-mono font-bold text-sm sm:text-base text-white">Currently Learning: C &rarr; C++</span>
+            </div>
+          </div>
+        </div>
+        <div class="pt-6 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-300 font-light leading-relaxed">
+          <p>Enrolled in core computer science at JECRC University, focusing on discrete algorithms, memory models in procedural C, and software engineering discipline.</p>
+          <p>Active participant in the JECRC Makerspace, designing hardware integrations and envisioning physical robotics housings for the Happy AI assistant.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. WHAT I DO / SKILLS SECTION -->
+    <section id="skills" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="mb-12">
+        <span class="font-mono text-xs text-pink-400 uppercase tracking-widest bg-pink-950/40 px-3 py-1 rounded-full border border-pink-500/30">03 // WHAT I DO</span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mt-2">
+          Skills &amp; <span class="text-gradient">Capabilities</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div class="glass-card rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-cyan-400 font-bold text-lg">&lt;/&gt;</span>
+            <span class="font-mono text-xs text-cyan-300 font-semibold px-2 py-0.5 rounded bg-cyan-950/60">88%</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white mb-2">Web Development</h3>
+          <p class="text-xs sm:text-sm text-slate-300 mb-4 font-light">HTML, CSS, JavaScript, responsive design, component architecture, and high-performance DOM manipulation.</p>
+          <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-slate-400">
+            <span class="px-2 py-0.5 bg-white/5 rounded">HTML5</span>
+            <span class="px-2 py-0.5 bg-white/5 rounded">CSS3</span>
+            <span class="px-2 py-0.5 bg-white/5 rounded">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-purple-400 font-bold text-lg">&diams;</span>
+            <span class="font-mono text-xs text-purple-300 font-semibold px-2 py-0.5 rounded bg-purple-950/60">90%</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white mb-2">UI/UX &amp; Brand Design</h3>
+          <p class="text-xs sm:text-sm text-slate-300 mb-4 font-light">Glassmorphism aesthetics, dark futuristic typography, micro-interactions, and conversion-optimized interfaces.</p>
+          <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-slate-400">
+            <span class="px-2 py-0.5 bg-white/5 rounded">Figma</span>
+            <span class="px-2 py-0.5 bg-white/5 rounded">Glassmorphism</span>
+            <span class="px-2 py-0.5 bg-white/5 rounded">Design Systems</span>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-pink-400 font-bold text-lg">&empty;</span>
+            <span class="font-mono text-xs text-pink-300 font-semibold px-2 py-0.5 rounded bg-pink-950/60">82%</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white mb-2">AI Assistants &amp; Chatbots</h3>
+          <p class="text-xs sm:text-sm text-slate-300 mb-4 font-light">Python voice assistants, speech recognition, Botpress autonomous workflows, and cited knowledge retrieval.</p>
+          <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-slate-400">
+            <span class="px-2 py-0.5 bg-white/5 rounded">Python</span>
+            <span class="px-2 py-0.5 bg-white/5 rounded">Botpress</span>
+            <span class="px-2 py-0.5 bg-white/5 rounded">Voice AI</span>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-emerald-400 font-bold text-lg">C</span>
+            <span class="font-mono text-xs text-emerald-300 font-semibold px-2 py-0.5 rounded bg-emerald-950/60">78%</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white mb-2">Programming: C &rarr; C++</h3>
+          <p class="text-xs sm:text-sm text-slate-300 mb-4 font-light">Currently mastering procedural C, pointers, memory models; goal to master object-oriented C++ and DSA.</p>
+          <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-slate-400">
+            <span class="px-2 py-0.5 bg-white/5 rounded">C (Learning)</span>
+            <span class="px-2 py-0.5 bg-white/5 rounded">C++ (Target)</span>
+            <span class="px-2 py-0.5 bg-white/5 rounded">Pointers</span>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-amber-400 font-bold text-lg">&equiv;</span>
+            <span class="font-mono text-xs text-amber-300 font-semibold px-2 py-0.5 rounded bg-amber-950/60">85%</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white mb-2">Tools &amp; Ecosystem</h3>
+          <p class="text-xs sm:text-sm text-slate-300 mb-4 font-light">GitHub, Vercel CI/CD deployments, modern AI IDEs (Antigravity, Lovable), and rapid prototyping environments.</p>
+          <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-slate-400">
+            <span class="px-2 py-0.5 bg-white/5 rounded">GitHub</span>
+            <span class="px-2 py-0.5 bg-white/5 rounded">Vercel</span>
+            <span class="px-2 py-0.5 bg-white/5 rounded">Antigravity</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Currently Learning Continuous Ticker -->
+      <div class="glass-card rounded-2xl p-4 overflow-hidden">
+        <div class="flex items-center gap-2 text-cyan-400 font-mono text-xs uppercase mb-2">
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+          Currently Learning Ticker:
+        </div>
+        <div class="relative overflow-hidden w-full">
+          <div class="animate-ticker text-xs font-mono text-slate-300 gap-4">
+            <span class="px-3 py-1 rounded bg-black/60 border border-white/10">Pointers &amp; Memory in C</span>
+            <span class="px-3 py-1 rounded bg-black/60 border border-white/10">Object-Oriented C++</span>
+            <span class="px-3 py-1 rounded bg-black/60 border border-white/10">Botpress Autonomous Pipelines</span>
+            <span class="px-3 py-1 rounded bg-black/60 border border-white/10">Arduino Hardware &amp; Robot Chassis</span>
+            <span class="px-3 py-1 rounded bg-black/60 border border-white/10">Vercel Cloud Deployments</span>
+            <span class="px-3 py-1 rounded bg-black/60 border border-white/10">Pointers &amp; Memory in C</span>
+            <span class="px-3 py-1 rounded bg-black/60 border border-white/10">Object-Oriented C++</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. PROJECTS SECTION -->
+    <section id="projects" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="mb-12">
+        <span class="font-mono text-xs text-purple-400 uppercase tracking-widest bg-purple-950/40 px-3 py-1 rounded-full border border-purple-500/30">04 // DETAILED SHOWCASE</span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mt-2">
+          Featured <span class="text-gradient">Projects</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- NOVA -->
+        <div class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between">
+          <div class="h-44 bg-gradient-to-br from-purple-900/60 to-slate-900 p-6 flex flex-col justify-between border-b border-white/10">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-purple-300 bg-purple-950/80 px-2.5 py-0.5 rounded-full border border-purple-500/40">In progress</span>
+              <span class="text-xs font-mono text-slate-400">#nova</span>
+            </div>
+            <div>
+              <span class="text-xs font-mono text-slate-300 uppercase tracking-widest">Salon Initiative</span>
+              <h3 class="font-display font-black text-3xl text-white">NOVA</h3>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1 justify-between">
+            <div>
+              <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed mb-4">
+                My own salon initiative. A modern salon platform idea: city-wise salon listings, price comparison, vacancy/availability check, and salon logins so salons can manage their own profile. Born from a startup-class pitch.
+              </p>
+              <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-slate-400 mb-6">
+                <span class="px-2 py-0.5 bg-white/5 rounded">Web</span>
+                <span class="px-2 py-0.5 bg-white/5 rounded">Startup</span>
+                <span class="px-2 py-0.5 bg-white/5 rounded">UI/UX</span>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-white/10 flex items-center gap-3">
+              <button onclick="openModal('nova')" class="flex-1 py-2 px-3 rounded-xl text-xs font-semibold text-slate-200 bg-slate-800 hover:bg-slate-700 transition-colors">Details</button>
+              <button onclick="handleLink('nova')" class="flex-1 py-2 px-3 rounded-xl text-xs font-mono text-purple-300 bg-purple-950/60 border border-purple-500/50 hover:bg-purple-900/60 hover:text-purple-200 transition-colors">Visit Site ↗</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- HAPPY -->
+        <div class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between">
+          <div class="h-44 bg-gradient-to-br from-cyan-900/60 to-slate-900 p-6 flex flex-col justify-between border-b border-white/10">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-cyan-300 bg-cyan-950/80 px-2.5 py-0.5 rounded-full border border-cyan-500/40">Growing</span>
+              <span class="text-xs font-mono text-slate-400">#happy</span>
+            </div>
+            <div>
+              <span class="text-xs font-mono text-slate-300 uppercase tracking-widest">Personal AI Assistant</span>
+              <h3 class="font-display font-black text-3xl text-white">HAPPY</h3>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1 justify-between">
+            <div>
+              <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed mb-4">
+                My own AI assistant that does tasks and work for me. Includes a Python voice assistant and a Botpress chatbot that takes tasks and answers with sources. Long-term vision: put Happy inside a movable Arduino robot built at the JECRC makerspace.
+              </p>
+              <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-slate-400 mb-6">
+                <span class="px-2 py-0.5 bg-white/5 rounded">Python</span>
+                <span class="px-2 py-0.5 bg-white/5 rounded">AI</span>
+                <span class="px-2 py-0.5 bg-white/5 rounded">Botpress</span>
+                <span class="px-2 py-0.5 bg-white/5 rounded">Voice</span>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-white/10 flex items-center gap-3">
+              <button onclick="openModal('happy')" class="flex-1 py-2 px-3 rounded-xl text-xs font-semibold text-slate-200 bg-slate-800 hover:bg-slate-700 transition-colors">Details</button>
+              <button onclick="handleLink('happy')" class="flex-1 py-2 px-3 rounded-xl text-xs font-mono text-slate-400 bg-slate-900/80 border border-slate-700/80 hover:text-amber-300 transition-colors">Coming Soon</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- OFFCULT -->
+        <div class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between">
+          <div class="h-44 bg-gradient-to-br from-pink-900/60 to-slate-900 p-6 flex flex-col justify-between border-b border-white/10">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-pink-300 bg-pink-950/80 px-2.5 py-0.5 rounded-full border border-pink-500/40">Live / Building</span>
+              <span class="text-xs font-mono text-slate-400">#offcult</span>
+            </div>
+            <div>
+              <span class="text-xs font-mono text-slate-300 uppercase tracking-widest">Global Streetwear</span>
+              <h3 class="font-display font-black text-3xl text-white">OFFCULT</h3>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1 justify-between">
+            <div>
+              <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed mb-4">
+                An online clothing store that brings street vendors from across the world onto one platform, giving street fashion a global stage.
+              </p>
+              <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-slate-400 mb-6">
+                <span class="px-2 py-0.5 bg-white/5 rounded">E-commerce</span>
+                <span class="px-2 py-0.5 bg-white/5 rounded">Web</span>
+                <span class="px-2 py-0.5 bg-white/5 rounded">Design</span>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-white/10 flex items-center gap-3">
+              <button onclick="openModal('offcult')" class="flex-1 py-2 px-3 rounded-xl text-xs font-semibold text-slate-200 bg-slate-800 hover:bg-slate-700 transition-colors">Details</button>
+              <button onclick="handleLink('offcult')" class="flex-1 py-2 px-3 rounded-xl text-xs font-mono text-pink-300 bg-pink-950/60 border border-pink-500/50 hover:bg-pink-900/60 hover:text-pink-200 transition-colors">Visit Site ↗</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. ALL MY SITES IN ONE PLACE -->
+    <section id="sites" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="mb-12">
+        <span class="font-mono text-xs text-cyan-400 uppercase tracking-widest bg-cyan-950/40 px-3 py-1 rounded-full border border-cyan-500/30">05 // ALL SITES DIRECTORY</span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mt-2">
+          All My Sites In <span class="text-gradient">One Place</span>
+        </h2>
+      </div>
+
+      <!-- Live-Site Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div class="glass-card rounded-2xl p-5 flex flex-col justify-between">
+          <div>
+            <div class="h-28 rounded-xl bg-gradient-to-br from-purple-900/60 to-slate-900 p-3 mb-4 flex flex-col justify-between border border-white/10">
+              <span class="text-[10px] font-mono text-purple-300">nova.app</span>
+              <span class="font-display font-black text-xl text-white">Nova</span>
+            </div>
+            <h4 class="font-display font-bold text-lg text-white mb-1">Nova</h4>
+            <p class="text-xs text-slate-300 font-light mb-4">A smart salon discovery and booking platform.</p>
+          </div>
+          <button onclick="handleLink('nova')" class="w-full py-2 rounded-xl text-xs font-mono bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">Open Site &rarr;</button>
+        </div>
+
+        <div class="glass-card rounded-2xl p-5 flex flex-col justify-between">
+          <div>
+            <div class="h-28 rounded-xl bg-gradient-to-br from-cyan-900/60 to-slate-900 p-3 mb-4 flex flex-col justify-between border border-white/10">
+              <span class="text-[10px] font-mono text-cyan-300">happy.app</span>
+              <span class="font-display font-black text-xl text-white">Happy</span>
+            </div>
+            <h4 class="font-display font-bold text-lg text-white mb-1">Happy</h4>
+            <p class="text-xs text-slate-300 font-light mb-4">My personal AI assistant that gets tasks done through chat and voice.</p>
+          </div>
+          <button onclick="handleLink('happy')" class="w-full py-2 rounded-xl text-xs font-mono bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">Open Site &rarr;</button>
+        </div>
+
+        <div class="glass-card rounded-2xl p-5 flex flex-col justify-between">
+          <div>
+            <div class="h-28 rounded-xl bg-gradient-to-br from-pink-900/60 to-slate-900 p-3 mb-4 flex flex-col justify-between border border-white/10">
+              <span class="text-[10px] font-mono text-pink-300">offcult.app</span>
+              <span class="font-display font-black text-xl text-white">Offcult</span>
+            </div>
+            <h4 class="font-display font-bold text-lg text-white mb-1">Offcult</h4>
+            <p class="text-xs text-slate-300 font-light mb-4">A global street-fashion marketplace for street vendors.</p>
+          </div>
+          <button onclick="handleLink('offcult')" class="w-full py-2 rounded-xl text-xs font-mono bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">Open Site &rarr;</button>
+        </div>
+
+        <div class="glass-card rounded-2xl p-5 flex flex-col justify-between">
+          <div>
+            <div class="h-28 rounded-xl bg-gradient-to-br from-emerald-900/60 to-slate-900 p-3 mb-4 flex flex-col justify-between border border-white/10">
+              <span class="text-[10px] font-mono text-emerald-300">yash.dev</span>
+              <span class="font-display font-black text-xl text-white">Portfolio</span>
+            </div>
+            <h4 class="font-display font-bold text-lg text-white mb-1">Portfolio</h4>
+            <p class="text-xs text-slate-300 font-light mb-4">This site, my home base.</p>
+          </div>
+          <a href="#hero" class="w-full py-2 rounded-xl text-xs font-mono bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center transition-all">Home Base &uarr;</a>
+        </div>
+      </div>
+
+      <!-- What each site does block -->
+      <div class="glass-card rounded-3xl p-6 sm:p-8">
+        <h3 class="font-display font-bold text-xl text-white mb-6">What Each Site Does (Comprehensive Summary)</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm font-light text-slate-300">
+          <div class="p-4 rounded-xl bg-black/40 border border-white/5">
+            <strong class="text-white block font-display font-bold mb-1">Nova — Smart Salon Discovery &amp; Booking</strong>
+            City-wise salon listings, real-time service price comparisons, vacancy and stylist chair availability checks, plus merchant owner logins.
+          </div>
+          <div class="p-4 rounded-xl bg-black/40 border border-white/5">
+            <strong class="text-white block font-display font-bold mb-1">Happy — Autonomous AI Voice &amp; Robotics</strong>
+            Personal AI assistant that automates developer workflows using Python voice synthesis and Botpress cited research, destined for an Arduino makerspace robot.
+          </div>
+          <div class="p-4 rounded-xl bg-black/40 border border-white/5">
+            <strong class="text-white block font-display font-bold mb-1">Offcult — Global Street-Fashion Marketplace</strong>
+            An online clothing boutique bridging independent street vendors with fashion buyers worldwide, celebrating authentic grassroots street drops.
+          </div>
+          <div class="p-4 rounded-xl bg-black/40 border border-white/5">
+            <strong class="text-white block font-display font-bold mb-1">Portfolio — Central Digital Headquarters</strong>
+            My living developer showcase presenting academic milestones at JECRC University, foundational C/C++ progress, and live application launches.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. MY JOURNEY SECTION -->
+    <section id="journey" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="mb-12">
+        <span class="font-mono text-xs text-purple-400 uppercase tracking-widest bg-purple-950/40 px-3 py-1 rounded-full border border-purple-500/30">06 // EVOLUTION</span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mt-2">
+          My <span class="text-gradient">Journey</span>
+        </h2>
+      </div>
+
+      <div class="space-y-6 mb-16">
+        <div class="glass-card rounded-2xl p-6 flex items-start gap-4">
+          <span class="font-mono text-xs text-cyan-400 bg-cyan-950/80 px-2.5 py-1 rounded border border-cyan-500/40">Step 01</span>
+          <div>
+            <h4 class="font-display font-bold text-white text-base">Started BTech CSE at JECRC University, Jaipur</h4>
+            <p class="text-xs sm:text-sm text-slate-300 font-light mt-0.5">Stepped into university engineering eager to explore the core architecture of computer systems.</p>
+          </div>
+        </div>
+        <div class="glass-card rounded-2xl p-6 flex items-start gap-4">
+          <span class="font-mono text-xs text-purple-400 bg-purple-950/80 px-2.5 py-1 rounded border border-purple-500/40">Step 02</span>
+          <div>
+            <h4 class="font-display font-bold text-white text-base">Discovered I Love Coding</h4>
+            <p class="text-xs sm:text-sm text-slate-300 font-light mt-0.5">Realized my mind naturally thinks in logic and algorithms. Fell in love with writing software.</p>
+          </div>
+        </div>
+        <div class="glass-card rounded-2xl p-6 flex items-start gap-4">
+          <span class="font-mono text-xs text-pink-400 bg-pink-950/80 px-2.5 py-1 rounded border border-pink-500/40">Step 03</span>
+          <div>
+            <h4 class="font-display font-bold text-white text-base">Learned C Programming Fundamentals</h4>
+            <p class="text-xs sm:text-sm text-slate-300 font-light mt-0.5">Mastered loops, memory layout, and pointer arithmetic to establish low-level discipline.</p>
+          </div>
+        </div>
+        <div class="glass-card rounded-2xl p-6 flex items-start gap-4">
+          <span class="font-mono text-xs text-cyan-400 bg-cyan-950/80 px-2.5 py-1 rounded border border-cyan-500/40">Step 04</span>
+          <div>
+            <h4 class="font-display font-bold text-white text-base">Started C++ &amp; Advanced Algorithms</h4>
+            <p class="text-xs sm:text-sm text-slate-300 font-light mt-0.5">Transitioning to object-oriented structures, STL, and algorithmic problem-solving.</p>
+          </div>
+        </div>
+        <div class="glass-card rounded-2xl p-6 flex items-start gap-4">
+          <span class="font-mono text-xs text-purple-400 bg-purple-950/80 px-2.5 py-1 rounded border border-purple-500/40">Step 05</span>
+          <div>
+            <h4 class="font-display font-bold text-white text-base">Built Nova, Happy, and Offcult</h4>
+            <p class="text-xs sm:text-sm text-slate-300 font-light mt-0.5">Shipped real tangible products: a salon startup pitch, a Python voice AI assistant, and a global streetwear store.</p>
+          </div>
+        </div>
+        <div class="glass-card rounded-2xl p-6 flex items-start gap-4">
+          <span class="font-mono text-xs text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded border border-emerald-500/40">Step 06</span>
+          <div>
+            <h4 class="font-display font-bold text-white text-base">Built &amp; Launched This Portfolio</h4>
+            <p class="text-xs sm:text-sm text-slate-300 font-light mt-0.5">Deployed this dark, futuristic cyber showcase to share my journey with collaborators and mentors.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Next Goals Strip -->
+      <div class="glass-card rounded-3xl p-6 sm:p-8">
+        <h3 class="font-display font-bold text-xl text-white mb-6">Next Goals Strip</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div class="p-4 rounded-xl bg-black/40 border border-white/5">
+            <span class="text-xs font-mono text-cyan-400 font-bold block mb-1">Goal 01</span>
+            <strong class="text-white text-sm block">Master C++ &amp; DSA</strong>
+            <p class="text-xs text-slate-400 mt-1">Deep dive into data structures and algorithmic mastery.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-black/40 border border-white/5">
+            <span class="text-xs font-mono text-purple-400 font-bold block mb-1">Goal 02</span>
+            <strong class="text-white text-sm block">Go Deeper in Web &amp; AI</strong>
+            <p class="text-xs text-slate-400 mt-1">Full-stack web frameworks and neural agent pipelines.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-black/40 border border-white/5">
+            <span class="text-xs font-mono text-pink-400 font-bold block mb-1">Goal 03</span>
+            <strong class="text-white text-sm block">Land Internships</strong>
+            <p class="text-xs text-slate-400 mt-1">Contribute on high-impact engineering teams.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-black/40 border border-white/5">
+            <span class="text-xs font-mono text-amber-400 font-bold block mb-1">Goal 04</span>
+            <strong class="text-white text-sm block">Earn Certifications</strong>
+            <p class="text-xs text-slate-400 mt-1">Complete credentials in cloud and algorithmic systems.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-black/40 border border-white/5">
+            <span class="text-xs font-mono text-emerald-400 font-bold block mb-1">Goal 05</span>
+            <strong class="text-white text-sm block">Build Happy Robot</strong>
+            <p class="text-xs text-slate-400 mt-1">Movable Arduino chassis built at JECRC makerspace.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. CONTACT & FOOTER -->
+    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="mb-12">
+        <span class="font-mono text-xs text-cyan-400 uppercase tracking-widest bg-cyan-950/40 px-3 py-1 rounded-full border border-cyan-500/30">07 // GET IN TOUCH</span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mt-2">
+          Contact &amp; <span class="text-gradient">Personal Details</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
+        <div class="lg:col-span-5 glass-card rounded-3xl p-6 sm:p-8 space-y-6">
+          <h3 class="font-display font-bold text-xl text-white">Direct Information</h3>
+          <div class="p-3.5 rounded-xl bg-black/40 border border-white/5">
+            <span class="text-xs font-mono text-slate-400 block uppercase">Name</span>
+            <span class="text-white font-medium">Yash Jhorar</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-black/40 border border-white/5">
+            <span class="text-xs font-mono text-slate-400 block uppercase">Email</span>
+            <span class="text-amber-300 font-mono text-xs">Available via form (placeholder configured)</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-black/40 border border-white/5">
+            <span class="text-xs font-mono text-slate-400 block uppercase">Phone / WhatsApp</span>
+            <span class="text-amber-300 font-mono text-xs">Available upon request</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-black/40 border border-white/5">
+            <span class="text-xs font-mono text-slate-400 block uppercase">Location</span>
+            <span class="text-white font-medium">Jaipur, Rajasthan, India</span>
+          </div>
+
+          <!-- Socials -->
+          <div class="pt-2">
+            <span class="text-xs font-mono text-slate-400 block uppercase mb-3">Social Handles</span>
+            <div class="flex flex-wrap gap-2 text-xs font-mono">
+              <button onclick="showToast('LinkedIn profile handle coming soon in SITE config!')" class="px-3 py-2 rounded-xl bg-slate-900 border border-white/10 hover:border-cyan-400 text-slate-300 transition-colors">LinkedIn</button>
+              <button onclick="showToast('GitHub handle coming soon in SITE config!')" class="px-3 py-2 rounded-xl bg-slate-900 border border-white/10 hover:border-purple-400 text-slate-300 transition-colors">GitHub</button>
+              <button onclick="showToast('Instagram handle coming soon in SITE config!')" class="px-3 py-2 rounded-xl bg-slate-900 border border-white/10 hover:border-pink-400 text-slate-300 transition-colors">Instagram</button>
+            </div>
+          </div>
+
+          <button onclick="showToast('Resume is currently being updated with latest CSE Year 1 projects!')" class="w-full py-3 rounded-xl text-xs font-semibold text-slate-300 bg-slate-800 hover:bg-slate-700 transition-colors">
+            Download Resume (Coming Soon)
+          </button>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="lg:col-span-7 glass-card rounded-3xl p-6 sm:p-8">
+          <h3 class="font-display font-bold text-xl text-white mb-6">Send a Message</h3>
+          <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+            <div>
+              <label class="block text-xs font-mono uppercase text-slate-300 mb-2">Your Name</label>
+              <input type="text" id="formName" required placeholder="e.g. Alex Sharma" class="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/10 focus:border-cyan-400 focus:outline-none text-sm text-white">
+            </div>
+            <div>
+              <label class="block text-xs font-mono uppercase text-slate-300 mb-2">Your Email</label>
+              <input type="email" id="formEmail" required placeholder="e.g. alex@example.com" class="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/10 focus:border-purple-400 focus:outline-none text-sm text-white">
+            </div>
+            <div>
+              <label class="block text-xs font-mono uppercase text-slate-300 mb-2">Message</label>
+              <textarea id="formMessage" rows="4" required placeholder="Your message..." class="w-full px-4 py-3 rounded-xl bg-black/50 border border-white/10 focus:border-pink-400 focus:outline-none text-sm text-white"></textarea>
+            </div>
+            <button type="submit" class="w-full py-3.5 rounded-xl font-display font-semibold text-sm text-white bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 hover:from-cyan-400 hover:to-pink-500 shadow-[0_0_20px_rgba(168,85,247,0.5)] transition-all">
+              Send Message &rarr;
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-400">
+        <div>Designed &amp; Built by Yash Jhorar &copy; 2026</div>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="hover:text-cyan-400 transition-colors">
+          Back to top &uarr;
+        </button>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- Interactive Project Modal -->
+  <div id="projectModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="glass-card rounded-3xl p-6 sm:p-8 max-w-2xl w-full max-h-[85vh] overflow-y-auto text-slate-200">
+      <div class="flex items-start justify-between pb-4 border-b border-white/10 mb-4">
+        <div>
+          <span id="modalBadge" class="text-xs font-mono text-purple-400 uppercase">Project</span>
+          <h3 id="modalTitle" class="font-display font-extrabold text-2xl text-white">Project Name</h3>
+        </div>
+        <button onclick="closeModal()" class="p-2 text-slate-400 hover:text-white">&times;</button>
+      </div>
+      <p id="modalDesc" class="text-sm text-slate-300 leading-relaxed mb-6 font-light"></p>
+      <div class="flex justify-end gap-3 pt-4 border-t border-white/10">
+        <button onclick="closeModal()" class="px-4 py-2 rounded-xl text-xs font-medium bg-slate-800 text-slate-300">Close</button>
+        <button id="modalActionBtn" class="px-4 py-2 rounded-xl text-xs font-mono text-slate-400 bg-slate-900 border border-slate-700">Coming Soon</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="fixed bottom-6 right-6 z-[100] max-w-sm rounded-2xl bg-[#0b0f19] border border-purple-500/40 p-4 shadow-2xl backdrop-blur-xl hidden text-xs text-slate-200">
+    <div id="toastMsg"></div>
+  </div>
+
+  <!-- Vanilla Scripts -->
+  <script>
+    // Typewriter
+    const roles = SITE.roles;
+    let rIdx = 0, charIdx = 0, isDel = false;
+    const typeEl = document.getElementById('typewriterText');
+    function typeCycle() {
+      const current = roles[rIdx];
+      if (!isDel) {
+        typeEl.textContent = current.substring(0, charIdx + 1);
+        charIdx++;
+        if (charIdx === current.length) {
+          isDel = true;
+          setTimeout(typeCycle, 2000);
+          return;
+        }
+      } else {
+        typeEl.textContent = current.substring(0, charIdx - 1);
+        charIdx--;
+        if (charIdx === 0) {
+          isDel = false;
+          rIdx = (rIdx + 1) % roles.length;
+          setTimeout(typeCycle, 300);
+          return;
+        }
+      }
+      setTimeout(typeCycle, isDel ? 40 : 100);
+    }
+    typeCycle();
+
+    // Scroll Progress
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      const prog = (window.scrollY / (h || 1)) * 100;
+      document.getElementById('scrollProgressBar').style.width = prog + '%';
+    });
+
+    // Custom Cursor
+    const dot = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    window.addEventListener('mousemove', (e) => {
+      dot.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%)`;
+      ring.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%)`;
+    });
+
+    // Particles Canvas
+    const canvas = document.getElementById('particleCanvas');
+    const ctx = canvas.getContext('2d');
+    let cw = canvas.width = window.innerWidth;
+    let ch = canvas.height = window.innerHeight;
+    window.addEventListener('resize', () => { cw = canvas.width = window.innerWidth; ch = canvas.height = window.innerHeight; });
+    const particles = Array.from({ length: 45 }, () => ({
+      x: Math.random() * cw, y: Math.random() * ch,
+      vx: (Math.random() - 0.5) * 0.4, vy: (Math.random() - 0.5) * 0.4,
+      r: Math.random() * 1.5 + 1
+    }));
+    function drawParticles() {
+      ctx.clearRect(0, 0, cw, ch);
+      ctx.fillStyle = '#a855f7';
+      particles.forEach(p => {
+        p.x = (p.x + p.vx + cw) % cw;
+        p.y = (p.y + p.vy + ch) % ch;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      requestAnimationFrame(drawParticles);
+    }
+    drawParticles();
+
+    // Toast
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      document.getElementById('toastMsg').textContent = msg;
+      t.classList.remove('hidden');
+      t.classList.add('flex');
+      setTimeout(() => {
+        t.classList.add('hidden');
+        t.classList.remove('flex');
+      }, 4000);
+    }
+
+    // Modal
+    const modalData = {
+      nova: { title: "NOVA — Salon Initiative", badge: "In Progress", desc: "A modern salon platform idea: city-wise salon listings, price comparison, vacancy/availability check, and salon logins so salons can manage their own profile. Born from a startup-class pitch at JECRC University." },
+      happy: { title: "HAPPY — Personal AI Assistant", badge: "Growing", desc: "My own AI assistant that does tasks and work for me. Includes a Python voice assistant and a Botpress chatbot that takes tasks and answers with sources. Long-term vision: put Happy inside a movable Arduino robot built at the JECRC makerspace." },
+      offcult: { title: "OFFCULT — Global Street Fashion", badge: "Live / Building", desc: "An online clothing store that brings street vendors from across the world onto one platform, giving street fashion a global stage." }
+    };
+    function openModal(id) {
+      const item = modalData[id];
+      if (!item) return;
+      document.getElementById('modalTitle').textContent = item.title;
+      document.getElementById('modalBadge').textContent = item.badge;
+      document.getElementById('modalDesc').textContent = item.desc;
+      // Wire up the action button
+      const btn = document.getElementById('modalActionBtn');
+      const proj = SITE.projects.find(p => p.id === id);
+      if (proj && !isPlaceholderLink(proj.link)) {
+        btn.textContent = 'Visit Site ↗';
+        btn.className = 'px-4 py-2 rounded-xl text-xs font-mono text-pink-300 bg-pink-950/60 border border-pink-500/50 hover:bg-pink-900/60 transition-colors cursor-pointer';
+        btn.onclick = () => { window.open(proj.link, '_blank'); closeModal(); };
+      } else {
+        btn.textContent = 'Coming Soon';
+        btn.className = 'px-4 py-2 rounded-xl text-xs font-mono text-slate-400 bg-slate-900 border border-slate-700 cursor-not-allowed';
+        btn.onclick = null;
+      }
+      const m = document.getElementById('projectModal');
+      m.classList.remove('hidden');
+      m.classList.add('flex');
+    }
+    function closeModal() {
+      const m = document.getElementById('projectModal');
+      m.classList.add('hidden');
+      m.classList.remove('flex');
+    }
+
+    function handleLink(id) {
+      const proj = SITE.projects.find(p => p.id === id);
+      if (proj && isPlaceholderLink(proj.link)) {
+        showToast(proj.name + ' deployment in progress! Link coming soon.');
+      } else if (proj) {
+        window.open(proj.link, '_blank');
+      }
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      showToast('Thank you! Message dispatched successfully.');
+      e.target.reset();
+    }
+
+    let isDark = true;
+    function toggleTheme() {
+      isDark = !isDark;
+      const icon = document.getElementById('themeIcon');
+      const text = document.getElementById('themeText');
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+        document.body.style.backgroundColor = '#06080d';
+        document.body.style.color = '#e2e8f0';
+        icon.textContent = '☀️';
+        text.textContent = 'Light';
+        showToast('Switched to Dark Cyber Theme');
+      } else {
+        document.documentElement.classList.remove('dark');
+        document.body.style.backgroundColor = '#0b0f19';
+        document.body.style.color = '#f8fafc';
+        icon.textContent = '🌙';
+        text.textContent = 'Dark';
+        showToast('Switched to Stealth Frost Theme');
+      }
+    }
+  </script>
+</body>
 </html>

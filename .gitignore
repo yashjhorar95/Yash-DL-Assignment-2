@@ -1,3 +1,12 @@
-node_modules
-dist
-.env
+# Ignore build artefacts and dependencies
+node_modules/
+dist/
+legacy-backup/
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+# Logs
+*.log
+

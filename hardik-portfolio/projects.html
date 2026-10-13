@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- =====================================================
+       PROJECTS PAGE — Hardik Mantri Portfolio
+       Edit: project cards below — title, description, 
+             tech tags, and Live Demo / GitHub URLs
+       ===================================================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Hardik Mantri</title>
+  <meta name="description" content="Projects built by Hardik Mantri — web apps, tools, and experiments." />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+<div id="page-transition" class="page-transition"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar" aria-label="Main Navigation">
+  <a href="index.html" class="nav-logo">HM</a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="journey.html">Journey</a></li>
+    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">☀️</button>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="index.html">🏠 Home</a><a href="about.html">👤 About</a><a href="skills.html">⚡ Skills</a>
+  <a href="projects.html">🚀 Projects</a><a href="journey.html">🗺️ Journey</a>
+  <a href="achievements.html">🏆 Achievements</a><a href="contact.html">📬 Contact</a>
+</nav>
+
+<div class="page-wrapper">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-label reveal">My Work</p>
+      <h1 class="section-title reveal delay-1">
+        Projects &amp; <span>Experiments</span>
+      </h1>
+      <p class="section-subtitle reveal delay-2">
+        Things I've built, broken, and rebuilt — each one a step forward on my developer journey.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROJECTS GRID -->
+  <section class="section">
+    <div class="container">
+      <div class="projects-grid">
+
+        <!-- =====================================================
+             PROJECT CARD 1
+             EDIT: title, description, tags, Live Demo & GitHub URLs
+             Replace the emoji in .project-image with an <img> if you have a screenshot
+             ===================================================== -->
+        <article class="glass-card project-card reveal">
+          <div class="project-image">
+            <!-- EDIT: Replace emoji with <img src="assets/project1.png" alt="..."> -->
+            🌦️
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <!-- EDIT: Change status — "Completed", "In Progress", "Archived" -->
+              <span class="project-status">✅ Completed</span>
+              <!-- Optional featured badge -->
+              <!-- <span class="tag">⭐ Featured</span> -->
+            </div>
+            <!-- EDIT: Project 1 name -->
+            <h2 class="project-title">Weather App</h2>
+            <!-- EDIT: Project 1 description -->
+            <p class="project-desc">
+              A real-time weather application that fetches live weather data for any city using the 
+              OpenWeatherMap API. Features temperature, humidity, wind speed, and a 5-day forecast.
+            </p>
+            <div class="project-tags">
+              <!-- EDIT: Your tech tags -->
+              <span class="tag">HTML</span>
+              <span class="tag cyan">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag purple">API</span>
+            </div>
+            <div class="project-actions">
+              <!-- EDIT: Replace # with actual URLs -->
+              <a href="#" target="_blank" rel="noopener" class="btn btn-primary btn-sm">🌐 Live Demo</a>
+              <a href="https://github.com/yourusername/weather-app" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT CARD 2 -->
+        <article class="glass-card project-card reveal delay-1">
+          <div class="project-image" style="background: linear-gradient(135deg, rgba(183,148,244,0.15), rgba(99,179,237,0.1));">
+            📝
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-status" style="color:var(--blue);">🔨 In Progress</span>
+            </div>
+            <!-- EDIT: Project 2 name & description -->
+            <h2 class="project-title">To-Do List App</h2>
+            <p class="project-desc">
+              A clean, responsive task management app with local storage persistence. 
+              Supports adding, editing, deleting tasks, and filtering by status.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag cyan">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag purple">LocalStorage</span>
+            </div>
+            <div class="project-actions">
+              <a href="#" target="_blank" rel="noopener" class="btn btn-primary btn-sm">🌐 Live Demo</a>
+              <a href="https://github.com/yourusername/todo-app" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT CARD 3 -->
+        <article class="glass-card project-card reveal delay-2">
+          <div class="project-image" style="background: linear-gradient(135deg, rgba(118,228,247,0.12), rgba(183,148,244,0.1));">
+            🧮
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-status">✅ Completed</span>
+            </div>
+            <!-- EDIT: Project 3 name & description -->
+            <h2 class="project-title">Calculator App</h2>
+            <p class="project-desc">
+              A sleek, fully functional calculator with support for basic arithmetic operations, 
+              keyboard input, and a clean dark-mode UI.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag cyan">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <div class="project-actions">
+              <a href="#" target="_blank" rel="noopener" class="btn btn-primary btn-sm">🌐 Live Demo</a>
+              <a href="https://github.com/yourusername/calculator" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- =====================================================
+             ADD MORE PROJECTS HERE — Copy the block above
+             ===================================================== -->
+
+      </div><!-- end projects-grid -->
+
+      <!-- Call to action -->
+      <div style="text-align:center; margin-top:60px;" class="reveal">
+        <p style="color:var(--text-secondary); margin-bottom:20px;">
+          More projects are being built! Follow my GitHub for updates.
+        </p>
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="btn btn-outline">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          View All on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">Hardik Mantri</div>
+    <p class="footer-tagline">Aspiring Developer · Curious Learner · Future Tech Builder</p>
+    <div class="footer-socials">
+      <a href="mailto:your.email@example.com" class="footer-social-link" aria-label="Email">✉️</a>
+      <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="footer-social-link" aria-label="GitHub">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+      </a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a><a href="journey.html">Journey</a>
+      <a href="achievements.html">Achievements</a><a href="contact.html">Contact</a>
+    </nav>
+    <p class="footer-copy">© 2025 <span>Hardik Mantri</span>. Designed & built with ❤️ and lots of ☕</p>
+  </div>
+</footer>
+<button id="back-to-top" aria-label="Scroll to top">↑</button>
+<script src="js/shared.js" defer></script>
+</body>
+</html>
